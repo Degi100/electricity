@@ -6,6 +6,7 @@
     justify-content: center; 
     background-image: url(https://eieo.nl/wp-content/uploads/2015/11/eieo-afbeelding-2.jpg);
     align-items: center;
+    align-content: center;
     background-size: 100%;
     background-position: 10%;
     height: max-content;
@@ -24,6 +25,7 @@ h1{
 
 h2{
     font-size: 30px;
+    align-content: center;
 }
 
 li {
