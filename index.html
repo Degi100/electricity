@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Static Electricity Calculater </h1>
+        <div class="statics">
+            <div class="elec1">
+                <ul>
+                    <h2>Consumption Total
+                    </h2>
+                    <li>{{totalElectrical}}</li>
+                    <li>{{averageDay}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="elec2">
+            <ul>
+                <h2>Costs Total</h2>
+                <li>{{priceMonth}}</li>
+                <li>{{averageCostsKwDay}}</li>
+            </ul>
+        </div>
+        <div class="elec3">
+            <ul>
+                <h2>Electricity Peak</h2>
+                <li>{{electricalPeak}}</li>
+                <li>{{priceMonthPeak}}</li>
+            </ul>
+        </div>
+
+        <script src="energy.js"></script>
+
+</body>
+
+</html>
