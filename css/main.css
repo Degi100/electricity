@@ -2,12 +2,14 @@
 
 #app {
     display: flex;
-    flex-direction:column; 
-    background-image: url(https://images.everyeye.it/img-notizie/l-osservazione-sistema-quantistico-invertire-corrente-v3-308042-1280x720.jpg);
+    flex-direction:column;
+    justify-content: center; 
+    background-image: url(https://eieo.nl/wp-content/uploads/2015/11/eieo-afbeelding-2.jpg);
     align-items: center;
-    background-repeat: no-repeat;
-    background-size: 200%;
-    background-position: fixed;
+    background-size: 100%;
+    background-position: 10%;
+    height: max-content;
+    background-position: cover;
  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  position: relative;
 
@@ -42,3 +44,6 @@ li {
     background-position: right;
 }
 
+@media screen and{max-width: ;
+    
+}
