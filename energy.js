@@ -85,6 +85,12 @@ console.log(priceMonthPeak);
         Vue.createApp(App).mount('#app');
 
 
+        const config = {
+  type: 'line',
+  data,
+  options: {}
+};
+
 
 // let test = electricalPeak;
 
