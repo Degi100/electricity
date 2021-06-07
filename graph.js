@@ -57,6 +57,7 @@ var myChart = new Chart(ctx, {
                 'rgba(255, 159, 64, 7)'
             ],
             borderWidth: 1
+            
         }
     ]
     },
