@@ -5,10 +5,8 @@ const electrical = [
 ];
 
 let totalElectrical = electrical.reduce( (prev, curr) => prev + curr, 0);
-//Old: let totalElectricalTemp = Math.round(totalElectrical * 100) / 100;
 let totalElectricalTemp = `${totalElectrical.toFixed(2)}`; 
 totalElectrical = `${totalElectrical.toFixed(2)} KW`;
-//Old: console.log(totalElectrical + ' used in ' + electrical.length + ' Days');
 totalElectrical = `${totalElectrical} used in ${electrical.length} days`;
 
 const days = 30;
