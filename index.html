@@ -14,17 +14,26 @@
 
 <body>
     <div id="app">
-        <h1>Static Electricity Calculater </h1>
-        <div class="calc">Watt Calc</div>
-        <input v-model.trim="msg" type="number"/>
 
+        <h1>Static Electricity Calculater </h1>
         <div class="statics">
+            <div class="wattcalc">
+                
+                    <h3>Advance:</h3>
+
+                    <input type="number" id="myNumberWatt" value="num" placeholder="Watt">
+                    <p>8 Stunden/ Tag; 0,33ct/KW</p>
+                    <input type="number" id="myNumberHours" value="num" placeholder="keine Eingabe möglich">
+                    <button onclick="myFunction()">Calculate</button>
+                    <p id="wattcalculate"></p>
+                    <p id="hourscalc"></p>
+            </div>
             <div class="elec1">
-                <ul>
-                    <h2>Consumption Total
-                    </h2>
-                    <li>{{totalElectrical}}</li>
-                    <li>{{averageDay}}</li>
+
+                <h2>Consumption Total
+                </h2>
+                <li>{{totalElectrical}}</li>
+                <li>{{averageDay}}</li>
                 </ul>
             </div>
         </div>
@@ -43,11 +52,11 @@
             </ul>
         </div>
 
-<canvas id="myChart" class="chart" width="400" height="400"></canvas>
+        <canvas id="myChart" class="chart" width="400" height="400"></canvas>
 
         <script src="energy.js"></script>
         <script src="graph.js"></script>
-        
+
 
 </body>
 
