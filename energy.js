@@ -29,8 +29,6 @@ totalElectrical = `${totalElectrical.toFixed(2)} KW`;
 totalElectrical = `${totalElectrical} used in ${electrical.length} days`;
 console.log(totalElectrical);
 
-
-
 const days = 30;
 let averageKW = totalElectricalTemp;
 let averageDay = totalElectricalTemp / days;

@@ -52,6 +52,7 @@ li {
     background-repeat: no-repeat;
     background-size: 10%;
     background-position: right;
+    box-shadow: 5px 5px 5px black;
 }
 
 .chart{
@@ -60,4 +61,5 @@ li {
     max-height: 50vh;
     margin: 50px;
     border-radius: 30px;
+    box-shadow: 5px 5px 5px black;
 }
