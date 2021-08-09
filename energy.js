@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 const electrical = [
   2.06, 1.5, 2.54, 2.62, 2.74, 3.16, 2.09, 2.23, 2.1, 1.78, 2.75, 2.59, 5.58,
   5.7, 5.8, 5.38, 5.6, 5.3, 4.98, 5.59, 5.34, 5.0, 4.16, 1.2, 5.7, 5.8, 5.8,
-  3.87, 2.09, 0
+  3.87, 2.09, 0,
 ];
 
 let totalElectrical = electrical.reduce((prev, curr) => prev + curr, 0);
@@ -10,7 +11,7 @@ totalElectrical = `${totalElectrical.toFixed(2)} KW`;
 totalElectrical = `${totalElectrical} used in ${electrical.length} days`;
 
 const days = 30;
-let averageKW = totalElectricalTemp;
+// let averageKW = totalElectricalTemp;
 let averageDay = totalElectricalTemp / days;
 averageDay = `${averageDay.toFixed(2)}  KW Average per day`;
 
@@ -25,7 +26,7 @@ averageCostsKwDay = `${averageCostsKwDay.toFixed(2)} € Average per day`;
 let electricalPeak = electrical.slice(12, 27);
 let totalElectricalPeak = electricalPeak.reduce((prev, curr) => prev + curr, 0);
 electricalPeak = electricalPeak.length;
-electricalPeak = `${totalElectricalPeak} KW used in ${electricalPeak} Days`
+electricalPeak = `${totalElectricalPeak} KW used in ${electricalPeak} Days`;
 
 let priceMonthPeak = totalElectricalPeak * energyPriceKW;
 priceMonthPeak = priceMonthPeak.toFixed(2);
@@ -39,27 +40,25 @@ const App = {
       priceMonth: priceMonth,
       averageCostsKwDay: averageCostsKwDay,
       electricalPeak: electricalPeak,
-      priceMonthPeak: priceMonthPeak
+      priceMonthPeak: priceMonthPeak,
     };
-  }
+  },
 };
 
-Vue.createApp(App).mount('#app');
+Vue.createApp(App).mount("#app");
 
-const config = {
-  type: 'line',
-  data,
-  options: {}
-};
+// const config = {
+//   type: "line",
+//   data,
+//   options: {},
+// };
 
-  function myFunction() {
-    let numberWattx = document.getElementById("myNumberWatt").value;
-    // let numberWatth = document.getElementById("myNumbersHours").value;
-    wattTime = 8; //Stunden
-    energyPriceKW2 = 0.33;
-     numberWattx = numberWattx / 1000;
-     priceWattTotal = numberWattx * wattTime * energyPriceKW2;
-     
+function calculateWattPerHourPrice() {
+  const numberWattValue = document.getElementById("numberWatt").value;
+  const numberHoursValue = document.getElementById("numberHours").value;
+  const numberPriceValue = document.getElementById("numberPriceKW").value;
+  const result = (numberWattValue/1000) * numberHoursValue * numberPriceValue;
+  document.getElementById("wattcalculate").innerHTML = result.toFixed(2) + " €";
 
-    document.getElementById("wattcalculate", "hourscalc").innerHTML = priceWattTotal + ' €';
-  }
+  return;
+}

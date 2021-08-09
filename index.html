@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/vue@next"></script>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Static Electricity Calculater</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
+      <h1>Static Electricity Calculater</h1>
+      <div class="statics">
+        <div class="wattcalc">
+          <h3>
+            Berechne den Stromverbrauch eines Gerätes z.B TV, Lampe, Computer
+          </h3>
 
-        <h1>Static Electricity Calculater </h1>
-        <div class="statics">
-            <div class="wattcalc">
-                
-                    <h3>Advance:</h3>
+          <input
+            type="number"
+            id="numberWatt"
+            placeholder="Watt"
+          />
 
-                    <input type="number" id="myNumberWatt" value="num" placeholder="Watt">
-                    
-                    <input type="number" id="myNumberHours" value="num" placeholder="keine Eingabe möglich">
-                    <p>User input hours</p> 
-                     <input type="number" id="numberPriceKW" value="num" placeholder="keine Eingabe möglich">
-                     User input price per Watt
-                    <button onclick="myFunction()">Calculate</button>
-                    <p id="wattcalculate"></p>8 Stunden/ Tag; 0,33ct/KW<p></p>
-                    <p id="hourscalc"></p>
-            </div>
-            <div class="elec1">
+          <input
+            type="number"
+            id="numberHours"
+            placeholder="Laufzeit in Stunden"
+          />
 
-                <h2>Consumption Total
-                </h2>
-                <li>{{totalElectrical}}</li>
-                <li>{{averageDay}}</li>
-                </ul>
-            </div>
+          <input
+            type="number"
+            id="numberPriceKW"
+            placeholder="Preis kW/h"
+          />
+
+          <button onclick="calculateWattPerHourPrice()">Calculate</button>
+          <p id="wattcalculate"></p>
+          <p id="hourscalc"></p>
         </div>
-        <div class="elec2">
-            <ul>
-                <h2>Costs Total</h2>
-                <li>{{priceMonth}}</li>
-                <li>{{averageCostsKwDay}}</li>
-            </ul>
+        <div class="elec1">
+          <h2>Consumption Total</h2>
+          <ul>
+            <li>{{totalElectrical}}</li>
+            <li>{{averageDay}}</li>
+          </ul>
         </div>
-        <div class="elec3">
-            <ul>
-                <h2>Electricity Peak</h2>
-                <li>{{electricalPeak}}</li>
-                <li>{{priceMonthPeak}}</li>
-            </ul>
-        </div>
+      </div>
+      <div class="elec2">
+        <ul>
+          <h2>Costs Total</h2>
+          <li>{{priceMonth}}</li>
+          <li>{{averageCostsKwDay}}</li>
+        </ul>
+      </div>
+      <div class="elec3">
+        <ul>
+          <h2>Electricity Peak</h2>
+          <li>{{electricalPeak}}</li>
+          <li>{{priceMonthPeak}}</li>
+        </ul>
+      </div>
 
-        <canvas id="myChart" class="chart" width="400" height="400"></canvas>
-
-        <script src="energy.js"></script>
-        <script src="graph.js"></script>
-
-
-</body>
-
+      <canvas id="myChart" class="chart" width="400" height="400"></canvas>
+    </div>
+    <script src="energy.js"></script>
+    <script src="graph.js"></script>
+  </body>
 </html>
