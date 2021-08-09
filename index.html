@@ -1,73 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/vue@next"></script>
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/main.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Static Electricity Calculater</title>
-  </head>
 
-  <body>
-    <div id="app">
-      <h1>Static Electricity Calculater</h1>
-      <div class="statics">
-        <div class="wattcalc">
-          <h3>
-            Berechne den Stromverbrauch eines Gerätes z.B TV, Lampe, Computer
-          </h3>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Static Electricity Calculater</title>
+</head>
 
-          <input
-            type="number"
-            id="numberWatt"
-            placeholder="Watt"
-          />
+<body>
+  <div id="app">
+    <h1>Static Electricity Calculater</h1>
+    <div class="statics">
+      <div class="wattcalc">
+        <h3>
+          Berechne den Stromverbrauch eines Gerätes z.B TV, Lampe, Computer
+        </h3>
+        <div class="inputArea">
+          <p>Watt</p>
+          <input type="number" id="numberWatt" placeholder="Watt" />
+          <p>Laufzeit in Stunden</p>
+          <input type="number" id="numberHours" placeholder="Laufzeit in Stunden" />
+          <p>Preis pro kWh</p>
+          <input type="number" id="numberPriceKW" placeholder="Preis kW/h" />
 
-          <input
-            type="number"
-            id="numberHours"
-            placeholder="Laufzeit in Stunden"
-          />
-
-          <input
-            type="number"
-            id="numberPriceKW"
-            placeholder="Preis kW/h"
-          />
-
-          <button onclick="calculateWattPerHourPrice()">Calculate</button>
+        </div>
+        <button onclick="calculateWattPerHourPrice()">Calculate</button>
+        <div class="outoutArea">
           <p id="wattcalculate"></p>
-          <p id="hourscalc"></p>
         </div>
-        <div class="elec1">
-          <h2>Consumption Total</h2>
-          <ul>
-            <li>{{totalElectrical}}</li>
-            <li>{{averageDay}}</li>
-          </ul>
-        </div>
-      </div>
-      <div class="elec2">
-        <ul>
-          <h2>Costs Total</h2>
-          <li>{{priceMonth}}</li>
-          <li>{{averageCostsKwDay}}</li>
-        </ul>
-      </div>
-      <div class="elec3">
-        <ul>
-          <h2>Electricity Peak</h2>
-          <li>{{electricalPeak}}</li>
-          <li>{{priceMonthPeak}}</li>
-        </ul>
-      </div>
 
-      <canvas id="myChart" class="chart" width="400" height="400"></canvas>
+      </div>
+      <div class="elec1">
+        <h2>Consumption Total</h2>
+        <ul>
+          <li>{{totalElectrical}}</li>
+          <li>{{averageDay}}</li>
+        </ul>
+      </div>
     </div>
-    <script src="energy.js"></script>
-    <script src="graph.js"></script>
-  </body>
+    <div class="elec2">
+      <ul>
+        <h2>Costs Total</h2>
+        <li>{{priceMonth}}</li>
+        <li>{{averageCostsKwDay}}</li>
+      </ul>
+    </div>
+    <div class="elec3">
+      <ul>
+        <h2>Electricity Peak</h2>
+        <li>{{electricalPeak}}</li>
+        <li>{{priceMonthPeak}}</li>
+      </ul>
+    </div>
+
+    <canvas id="myChart" class="chart" width="400" height="400"></canvas>
+  </div>
+  <script src="energy.js"></script>
+  <script src="graph.js"></script>
+</body>
+
 </html>
