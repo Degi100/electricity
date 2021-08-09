@@ -106,13 +106,6 @@ button {
   margin: 10px;
 }
 
-  .wattcalc {
-    background-color: red;
-  }
-
-  .statics {
-    border: 2px blue solid;
-  }
 
 .outputArea {
  margin: 50px;  
